@@ -16,7 +16,7 @@ function Navbar() {
         <h1 className='logo-text'>Agro Smart Hub</h1>
       </div>
       <ul>
-        <NavLink to={"/"}><li className='dashboard'>
+        <NavLink to={"/"} className="active"><li className='dashboard'>
           <BiSolidDashboard className='all-icon' />
           <p>Dashboard</p>
         </li></NavLink>
