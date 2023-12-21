@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+.dashboard {
+     height: 90vh;
+     width: 100%;
+
+     .Weather-report {
+          height: 10vw;
+          width: 95%;
+          margin-left: 3.5vw;
+          margin-top: 1vw;
+          display: grid;
+          grid-template-rows: 100%;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 1vw;
+     }
+
+     .dashboard-bottom {
+          display: flex;
+          height: 60vh;
+          width: 95%;
+          margin-top: 2vw;
+          margin-left: 3.5vw;
+
+          .map {
+               height: 100%;
+               width: 66.5%;
+               border-radius: 1vw;
+               border: 1px solid black;
+               font-size: 5vw;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .rightBottom {
+               height: 100%;
+               width: 32.7%;
+               font-size: 3vw;
+               margin-left: 1vw;
+               border-radius: 1vw;
+               border: 1px solid black;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+     }
+}

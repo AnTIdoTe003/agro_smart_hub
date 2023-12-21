@@ -1,4 +1,10 @@
 ### colors
+light blue----#5C9EAD
+white----#FFFFFF
+dark blue(used in all buttons)---#326273
+gray----#EEEEEE
+Atomic tangerine---#E39774
+
 
 # decide your self
 
