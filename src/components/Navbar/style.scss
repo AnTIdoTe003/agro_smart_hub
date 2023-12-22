@@ -105,12 +105,12 @@
                background-color: #326273;
                border-radius: 10px;
                color: #FFFFFF;
-               box-shadow: 1px 1px 5px 1px #FFFFFF;
+               box-shadow: 1px 1px 5px 1px #b2dae9;
                font-size: 1vw;
           }
      }
 
-     .user-profile {
+     .Navuser-profile {
           position: absolute;
           bottom: 0;
           left: 0;
@@ -142,13 +142,7 @@
                }
           }
 
-          .freePlan-button{
-               height: 1.6vw;
-               width: 4vw;
-               background-color: #326273;
-               font-size: .8vw;
-               color: #FFFFFF;
-               border-radius: 4px;
+          .nav-freeplanbutton{
                margin-top: .5vw;
                margin-left: 2vw;
           }
