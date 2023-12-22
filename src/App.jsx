@@ -6,6 +6,7 @@ import Topbar from "./components/topBar";
 import Dashboard from "./pages/Dashboard";
 import UserProfilePage from "./pages/userProfile";
 import Login from "./pages/login";
+import Chatbot from "./components/ChatBot/Chatbot";
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
             <Route path={"/"} element={<Dashboard />} />
             <Route path={"/profile"} element={<UserProfilePage />} />
             <Route path={"/home"} element={<Home />} />
-
           </Routes>
         </div>
+        <Chatbot />
       </div>
     </Router>
   );
