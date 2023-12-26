@@ -2,12 +2,19 @@ import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 
-function Login() {
+function SignUp() {
   return (
     <div className="login-page">
       <div className="login-inner">
-        <p className="login-title">Login</p>
+        <p className="login-title">SignUp</p>
         <form action="#">
+          <input
+            type="text"
+            name="Name"
+            id="Email"
+            placeholder="John Doe"
+            className="login-input input-margin1"
+          ></input>
           <input
             type="text"
             name="Email"
@@ -23,12 +30,10 @@ function Login() {
             className="login-input input-margin2"
           ></input>
         </form>
-        <a href="#" className="forgot-password">
-          <p>Forgot password?</p>
-        </a>
-        <button className="login-button">Login</button>
+
+        <button className="login-button">SignUp</button>
         <p className="signUp-link">
-          Don't have an account? <Link to="/signup">Signup</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
         <div className="or-section">
           <div className="section1"></div>
@@ -50,4 +55,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

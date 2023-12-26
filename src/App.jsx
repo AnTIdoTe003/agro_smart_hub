@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import UserProfilePage from "./pages/userProfile";
 import Login from "./pages/login";
 import Chatbot from "./components/ChatBot/Chatbot";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         <div className="pages">
           <Topbar />
           <Routes>
-            {/* <Route path={"/"} element={<Login />} /> */}
             <Route path={"/"} element={<Dashboard />} />
             <Route path={"/profile"} element={<UserProfilePage />} />
             <Route path={"/home"} element={<Home />} />
+            <Route path={"/login"} element={<Login />} />
+            <Route path={"/signup"} element={<SignUp />} />
           </Routes>
         </div>
         <Chatbot />
