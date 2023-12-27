@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 import { BiSolidDashboard } from "react-icons/bi";
-import { GoProjectSymlink } from "react-icons/go";
+import { IoTimerOutline } from "react-icons/io5";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { CiUser } from "react-icons/ci";
 import FreePlanButton from "../freePlanButton";
@@ -26,13 +26,13 @@ function Navbar() {
             <p>Dashboard</p>
           </li>
         </NavLink>
-        <NavLink to={"/home"} style={NavActiveClass}>
+        <NavLink to={"/timer"} style={NavActiveClass}>
           <li>
-            <GoProjectSymlink className="all-icon" />
-            <p>Project</p>
+            <IoTimerOutline className="Timer-icon all-icon" />
+            <p>Timer</p>
           </li>
         </NavLink>
-        <NavLink to="/pricing" style={NavActiveClass}>
+        <NavLink to={"/pricing"} style={NavActiveClass}>
           <li>
             <MdOutlinePriceChange className="all-icon" />
             <p>Pricing</p>

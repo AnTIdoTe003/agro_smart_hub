@@ -36,9 +36,10 @@
           display: flex;
           flex-direction: column;
           margin-top: 1.5vw;
+          height:auto;
           width: 100%;
           // margin-left: 1.5vw;
-          gap: 2vh;
+          gap: .5vw;
 
           li {
                height: 3vw;
@@ -46,7 +47,6 @@
                padding-left: 8%;
                display: flex;
                align-items: center;
-
                // border-radius: 0.3vw;
                &:hover {
                     background-color: #EEEEEE;
@@ -64,7 +64,9 @@
 
           .all-icon {
                font-size: 1.3vw;
-               margin-top: .3vw;
+          }
+          .Timer-icon{
+               font-size: 1.5vw;
           }
 
      }
