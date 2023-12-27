@@ -47,7 +47,7 @@ function SignUp() {
           </button>
           <button className="facebook-button login-others">
             <div className="google-logo"></div>
-            <p>Login with Facebook</p>
+            <p>Login with Google</p>
           </button>
         </div>
       </div>
