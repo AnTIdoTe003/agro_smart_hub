@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
-import { NavLink } from "react-router-dom";
+
+import { NavLink, Link } from "react-router-dom";
 import { BiSolidDashboard } from "react-icons/bi";
 import { IoTimerOutline } from "react-icons/io5";
 import { MdOutlinePriceChange } from "react-icons/md";
@@ -15,10 +16,13 @@ function Navbar() {
   };
   return (
     <div className="navbar">
-      <div className="logo-div">
-        <div className="logo"></div>
-        <h1 className="logo-text">Agro Smart Hub</h1>
-      </div>
+      <Link to="/">
+        <div className="logo-div">
+          <div className="logo"></div>
+
+          <h1 className="logo-text">Agro Smart Hub</h1>
+        </div>
+      </Link>
       <ul>
         <NavLink to={"/"} style={NavActiveClass} className="active">
           <li className="nav-dashboard">
