@@ -1,12 +1,14 @@
 import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import { ImCross } from "react-icons/im";
 
 function SignUp() {
   return (
-    <div className="login-page">
+    <div className="signUp-page">
       <div className="login-inner">
         <p className="login-title">SignUp</p>
+        <Link to={"/"}><ImCross className="close-icon"/></Link>
         <form action="#">
           <input
             type="text"

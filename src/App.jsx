@@ -8,6 +8,7 @@ import UserProfilePage from "./pages/userProfile";
 import Login from "./pages/login";
 import Chatbot from "./components/ChatBot/Chatbot";
 import TimerPage from "./pages/TimerPage";
+import WhyUs from "./pages/WhyUs";
 import PricingPage from "./pages/pricingPage";
 import SignUp from "./pages/SignUp";
 
@@ -24,6 +25,7 @@ function App() {
             <Route path={"/home"} element={<Home />} />
             <Route path={"/timer"} element={<TimerPage />} />
             <Route path={"/pricing"} element={<PricingPage />} />
+            <Route path={"/WhyUs"} element={<WhyUs />} />
             <Route path={"/login"} element={<Login />} />
             <Route path={"/signup"} element={<SignUp />} />
           </Routes>

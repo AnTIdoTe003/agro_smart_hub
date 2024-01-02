@@ -6,6 +6,7 @@ import { BiSolidDashboard } from "react-icons/bi";
 import { IoTimerOutline } from "react-icons/io5";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { CiUser } from "react-icons/ci";
+import { IoIosHelpCircleOutline } from "react-icons/io";
 import FreePlanButton from "../freePlanButton";
 
 function Navbar() {
@@ -46,6 +47,12 @@ function Navbar() {
           <li>
             <CiUser className="all-icon" />
             <p>Profile</p>
+          </li>
+        </NavLink>
+        <NavLink to={"/WhyUs"} style={NavActiveClass}>
+          <li>
+            <IoIosHelpCircleOutline className="all-icon" />
+            <p>Why Us?</p>
           </li>
         </NavLink>
       </ul>
