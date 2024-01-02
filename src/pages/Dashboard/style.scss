@@ -24,13 +24,9 @@
 
           .map {
                height: 100%;
-               width: 66.5%;
+               width: 50%;
                border-radius: 1vw;
                border: 1px solid black;
-               font-size: 5vw;
-               display: flex;
-               justify-content: center;
-               align-items: center;
                iframe{
                     border-radius: 1vw;
                }
@@ -38,14 +34,12 @@
 
           .rightBottom {
                height: 100%;
-               width: 32.7%;
-               font-size: 3vw;
+               width: 50%;
                margin-left: 1vw;
                border-radius: 1vw;
                border: 1px solid black;
-               display: flex;
-               justify-content: center;
-               align-items: center;
+               background-image: url(../../images/works.jpg);
+               background-size: cover;
           }
      }
 }

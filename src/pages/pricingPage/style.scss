@@ -63,6 +63,7 @@
                .plan-details {
                     margin-left: 5%;
                     margin-bottom: 5%;
+                    font-size: 1.1vw;
                }
           }
      }
@@ -94,7 +95,7 @@
 
                     label {
                          height: 1.3vw;
-                         width: 3.5vw;
+                         width: 3vw;
                          position: relative;
                          top: .3vw;
                          display: block;
@@ -128,7 +129,7 @@
                     }
 
                     input:checked+label:after {
-                         left: 2vw;
+                         left: 1.5vw;
                          transform: translateX(-10%);
                     }
                }
@@ -168,6 +169,7 @@
                     margin-left: 5%;
                     margin-bottom: 5%;
                     color: #FFFFFF;
+                    font-size: 1.1vw;
                }
           }
           .getStarted-button{

@@ -4,7 +4,6 @@ import { CiTempHigh } from "react-icons/ci";
 import { BsMoisture } from "react-icons/bs";
 import { CiCloudDrizzle } from "react-icons/ci";
 import Tempcomponent from "./components/Tempcomponent";
-// import Map from "../../components/Map/Map";
 
 function Dashboard() {
   return (
@@ -37,10 +36,9 @@ function Dashboard() {
       </div>
       <div className="dashboard-bottom">
         <div className="map">
-          {/* {<Map />} */}
-          Maps
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.5228495961533!2d88.34314047527555!3d22.484558179554472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270ecc09b4691%3A0x7f99d48523fd066a!2sCalcutta%20Institute%20of%20Engineering%20And%20Management%20(CIEM)!5e0!3m2!1sen!2sin!4v1703960156856!5m2!1sen!2sin" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div className="rightBottom">DON'T KNOW</div>
+        <div className="rightBottom"></div>
       </div>
     </div>
   );
