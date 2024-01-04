@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+.Why-Us {
+     height: 90vh;
+     width: 100%;
+     background-color: #132A13;
+
+     .inner-WhyUs {
+          height: 100%;
+          width: 70%;
+          .Why-us-margin {
+               margin-left: 3.5vw;
+               padding-top: 2vw;
+               font-size: 1.3vw;
+               color: white;
+     
+               .headings {
+                    font-weight: bold;
+                    font-size: 1.4vw;
+                    color: #ECF39E;
+               }
+          }
+     }
+}

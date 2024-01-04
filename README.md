@@ -1,11 +1,16 @@
-### colors
+### previously use colors
 light blue----#5C9EAD
 white----#FFFFFF
 dark blue(used in all buttons)---#326273
 gray----#EEEEEE
 Atomic tangerine---#E39774
 
-# colors
+# current use colors
+Dark Green---#132A13
+Medium green---#31572C
+Olive green----#4F772D
+Light green----#90A955
+Pale yellow---#ECF39E
 
 
 ### decide your self
