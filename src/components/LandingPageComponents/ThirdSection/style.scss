@@ -1,0 +1,80 @@
+$section-bg-color: #ecf0f1;
+$section-text-color: #2c3e50;
+$section-bg-color: #ecf0f1;
+$section-text-color: #2c3e50;
+$button-background-color: #f1cf69;
+$button-text-color: #000;
+$button-hover-background-color: #006400;
+$button-hover-text-color: #fff;
+$button-hover-transition-duration: 0.3s;
+$info-bg-color: #ecf0f1;
+$info-text-color: #2c3e50;
+$info-button-background-color: #ffd700;  
+$info-button-text-color: #000; 
+$info-button-hover-background-color: #006400;  
+$info-button-hover-text-color: #fff;  
+$info-button-hover-transition-duration: 0.3s;
+
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: $info-bg-color;
+  width: 100%;
+  height: 700px;
+
+  .left-content {
+    .text-content {
+      text-align: left;
+      color: $info-text-color;
+
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+        color: #000;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #6d8c54;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        line-height: 30px;
+        margin-bottom: 50px;
+      }
+
+      button {
+        padding: 20px 60px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        border-radius: 12px;
+        background-color: $button-background-color;
+        color: $button-text-color;
+        transition: background-color $button-hover-transition-duration,
+          color $button-hover-transition-duration;
+
+        &:hover {
+          background-color: $button-hover-background-color;
+          color: $button-hover-text-color;
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+      }
+    }
+  }
+
+  .right-content {
+    img {
+      width: 90%;
+      height: 350px;
+      border-radius: 20px;
+    }
+  }
+}
