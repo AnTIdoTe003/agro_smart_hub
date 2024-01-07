@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../../images/company-logo.png";
 import "./style.scss";
+import { CiSearch } from "react-icons/ci";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState(1);
@@ -16,6 +17,7 @@ const Navbar = () => {
         <img src={Logo} alt="Company Logo" />
       </div>
       <ul className="nav-list">
+      <li><CiSearch className="Search-icon"/></li>
         {["Home", "About", "Products", "WhyUs", "Help"].map((index) => (
           <li
             key={index}
