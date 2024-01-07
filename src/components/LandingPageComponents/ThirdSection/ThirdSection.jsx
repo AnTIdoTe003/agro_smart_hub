@@ -7,10 +7,10 @@ const ThirdSection = () => {
     <section className="info-section">
       <div className="left-content">
         <div className="text-content">
-          <h1>Main Title</h1>
-          <h2>We’re Leader in Smart irrigation</h2>
+          <h1>Agriculture automation</h1>
+          <h2>We are leader in agriculture automation</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br/> Suscipit odio vel nesciunt eos iste! Consequatur mollitia culpa harum  <br/>expedita praesentium tenetur quas saepe illum nam?
+          Agro Smart Hub Pvt Ltd, a forefront player in agriculture automation,<br></br>specializes in delivering complete irrigation and fertigation automation <br></br>systems. As an industry expert, our Agro Smart Hub ensures cutting-edge <br></br>solutions for efficient and automated farming practices.
           </p>
           <button>WHO WE ARE</button>
         </div>

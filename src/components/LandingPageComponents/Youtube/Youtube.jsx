@@ -19,32 +19,34 @@ const Youtube = () => {
   };
 
   return (
-   
+
     <div className="youtube-main">
-      <div className="text">
-        <h1 className="text-youtube">Subscribe to receive new youtube video</h1>
-      </div>
-      <div className="card-slider">
-        <div
-          className="cards-container"
-          style={{
-            transform: `translateX(${-currentCard * (100 / cardsToShow)}%)`,
-          }}
-        >
-          {[...Array(totalCards)].map((_, index) => (
-            <div className="youtube-card card-style" key={index}>
-              <h2>Card {index + 1}</h2>
-              <p>This is the content of Card {index + 1}.</p>
-            </div>
-          ))}
+      <div className="youtube-inner">
+        <div className="text">
+          <h1 className="text-youtube">Subscribe to receive new youtube video</h1>
+        </div>
+        <div className="card-slider">
+          <div
+            className="cards-container"
+            style={{
+              transform: `translateX(${-currentCard * (100 / cardsToShow)}%)`,
+            }}
+          >
+            {[...Array(totalCards)].map((_, index) => (
+              <div className="youtube-card card-style" key={index}>
+                <h2>Card {index + 1}</h2>
+                <p>This is the content of Card {index + 1}.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="navigate-button-instagram">
+          <button onClick={handlePrevCard}>Previous</button>
+          <button onClick={handleNextCard}>Next</button>
         </div>
       </div>
-      <div className="navigate-button-instagram">
-        <button onClick={handlePrevCard}>Previous</button>
-        <button onClick={handleNextCard}>Next</button>
-      </div>
     </div>
-   
+
   );
 };
 
