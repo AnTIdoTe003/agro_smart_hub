@@ -15,13 +15,12 @@ $hover-color: #E7B00B;
   border-bottom: 1px solid black;
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-
-    img {
-      width: 10%;
-      height: 10%;
-    }
+   width: 100px;
+   height: 100px;
+   img{
+    width: 100%;
+    height: 100%;
+   }
   }
 
   .nav-list {
@@ -75,7 +74,7 @@ $hover-color: #E7B00B;
           content: "";
           position: absolute;
           left: 0;
-          bottom: 5px;
+          bottom: 2px;
           width: 100%;
           height: 2px;
           background-color: $hover-color;
@@ -92,7 +91,7 @@ $hover-color: #E7B00B;
           content: "";
           position: absolute;
           left: 0;
-          bottom: 5px;
+          bottom: 2px;
           width: 100%;
           height: 2px;
           background-color: #E7B00B;

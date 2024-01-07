@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./style.scss";
-
+import { useMutation } from "react-query";
+import { axiosInstance } from "../../../helpers/axiosInstance";
 const ContactForm = () => {
-  const [selectedRequirement, setSelectedRequirement] = useState("");
-
-  const handleRequirementChange = (event) => {
-    setSelectedRequirement(event.target.value);
-  };
+  const [formData, setFormData] = useState({
+    email: "",
+    first_name: "",
+    last_name: "",
+    phone: "",
+    password: "",
+  });
+  const handleLogin = useMutation(
+    () => {
+      return axiosInstance({
+        url: "/create-users",
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: formData,
+      });
+    },
+    {
+      onSuccess: (data) => {
+        console.log(data);
+      },
+    }
+  );
   return (
     <section className="contact-form-section">
       <div className="form-element">
@@ -15,6 +35,9 @@ const ContactForm = () => {
           <div className="form-group">
             <label htmlFor="firstName">Enter Your Name</label>
             <input
+              onChange={(e) =>
+                setFormData({ ...formData, first_name: e.target.value })
+              }
               type="text"
               id="firstName"
               name="firstName"
@@ -25,6 +48,9 @@ const ContactForm = () => {
 
           <div className="form-group">
             <input
+              onChange={(e) =>
+                setFormData({ ...formData, last_name: e.target.value })
+              }
               type="text"
               id="lastName"
               placeholder="Last Name"
@@ -36,6 +62,9 @@ const ContactForm = () => {
           <div className="form-group">
             <label htmlFor="email">Enter Your Email</label>
             <input
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               type="email"
               placeholder="Email"
               id="email"
@@ -45,40 +74,34 @@ const ContactForm = () => {
           </div>
 
           <div className="form-group">
+            <label htmlFor="phoneNumber">Phone</label>
             <input
-              type="email"
-              id="confirmEmail"
-              name="confirmEmail"
-              placeholder="Confirm Email"
+              placeholder="Enter your phone number"
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
               required
             />
           </div>
-
           <div className="form-group">
-            <label htmlFor="phoneNumber">Phone</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="requirements">Requirements</label>
-            <select
-              id="requirements"
-              name="requirements"
-              onChange={handleRequirementChange}
-              value={selectedRequirement}
+            <label htmlFor="phoneNumber">Password</label>
+            <input
+              placeholder="Enter your password"
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
               required
-            >
-              <option value="" disabled>
-                Select a requirement
-              </option>
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-              <option value="Option 3">Option 3</option>
-              <option value="Option 4">Option 4</option>
-            </select>
+            />
           </div>
-
-          <button type="submit">Submit</button>
+          <button onClick={() => handleLogin.mutate()} type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </section>

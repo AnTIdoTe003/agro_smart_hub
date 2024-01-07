@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.scss";
 import Navbar from "../../components/LandingPageComponents/Navbar/Navbar";
 import WelcomeSection from "../../components/LandingPageComponents/WelcomeSection/WelcomeSection";
