@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
+import YoutubePic from "./youtube-pic.jpg";
 
 const Youtube = () => {
   const totalCards = 8;
@@ -19,11 +20,12 @@ const Youtube = () => {
   };
 
   return (
-
     <div className="youtube-main">
       <div className="youtube-inner">
         <div className="text">
-          <h1 className="text-youtube">Subscribe to receive new youtube video</h1>
+          <h1 className="text-youtube">
+            Subscribe to receive new youtube video
+          </h1>
         </div>
         <div className="card-slider">
           <div
@@ -34,9 +36,8 @@ const Youtube = () => {
           >
             {[...Array(totalCards)].map((_, index) => (
               <div className="youtube-card card-style" key={index}>
-                <h2>Card {index + 1}</h2>
-                <p>This is the content of Card {index + 1}.</p>
-              </div>
+                <img src={YoutubePic} alt="Youtube Banner Picture" />
+              </div>  
             ))}
           </div>
         </div>
@@ -46,7 +47,6 @@ const Youtube = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

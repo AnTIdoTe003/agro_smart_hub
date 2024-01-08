@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.scss";
 
+import BlogPic from './BlogPic.jpg'
 const Instagram = () => {
   const totalCards = 8;
   const cardsToShow = 4;
@@ -33,8 +34,7 @@ const Instagram = () => {
           >
             {[...Array(totalCards)].map((_, index) => (
               <div className="blog-card card-style" key={index}>
-                <h2>Card {index + 1}</h2>
-                <p>This is the content of Card {index + 1}.</p>
+                <img src={BlogPic} alt="" />
               </div>
             ))}
           </div>
