@@ -2,7 +2,7 @@ import "./App.css";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Navbar from "./components/DashboardComponents/Navbar";
 // import Topbar from "./components/DashboardComponents/topBar";
-// import Dashboard from "./pages/DashboardMain/Dashboard";
+import Dashboard from "./pages/DashboardMain/Dashboard";
 // import UserProfilePage from "./pages/DashboardMain/userProfile";
 // import Login from "./pages/DashboardMain/login";
 // import Chatbot from "./components/DashboardComponents/ChatBot/Chatbot";
@@ -11,7 +11,7 @@ import "./App.css";
 // import PricingPage from "./pages/DashboardMain/pricingPage";
 // import SignUp from "./pages/DashboardMain/SignUp";
 import LandingPage from "./pages/LandingPage/LandingPage";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     // <Router>
@@ -32,7 +32,13 @@ function App() {
     //     <Chatbot />
     //   </div>
     // </Router>
-    <LandingPage />
+    <Router>
+      <Routes>
+        <Route path={"/"} element={<LandingPage />} />
+        <Route path={"/dashboard"} element={<Dashboard />} />
+      </Routes>
+    </Router>
+
   );
 }
 

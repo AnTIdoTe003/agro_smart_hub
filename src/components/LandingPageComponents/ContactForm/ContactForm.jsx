@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./style.scss";
-import { useMutation } from "react-query";
-import { axiosInstance } from "../../../helpers/axiosInstance";
+import axios from "axios";
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -10,28 +10,24 @@ const ContactForm = () => {
     phone: "",
     password: "",
   });
-  const handleLogin = useMutation(
-    () => {
-      return axiosInstance({
-        url: "/create-users",
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: formData,
-      });
-    },
-    {
-      onSuccess: (data) => {
-        console.log(data);
-      },
+
+  const handleLogin = async () => {
+    try {
+      const { data } = await axios.post(
+        "http://127.0.0.1:5000/create-users",
+        formData
+      );
+      console.log(data);
+    } catch (error) {
+      console.log(error.message);
     }
-  );
+  };
+
   return (
     <section className="contact-form-section">
       <div className="form-element">
         <h1>Connect with us</h1>
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
           <div className="form-group">
             <label htmlFor="firstName">Enter Your Name</label>
             <input
@@ -87,19 +83,19 @@ const ContactForm = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="phoneNumber">Password</label>
+            <label htmlFor="password">Password</label>
             <input
               placeholder="Enter your password"
               onChange={(e) =>
                 setFormData({ ...formData, password: e.target.value })
               }
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
+              type="password"
+              id="password"
+              name="password"
               required
             />
           </div>
-          <button onClick={() => handleLogin.mutate()} type="submit">
+          <button onClick={handleLogin} type="submit">
             Submit
           </button>
         </form>

@@ -3,6 +3,7 @@ import "./style.scss";
 import { CiTempHigh } from "react-icons/ci";
 
 function Tempcomponent(props) {
+    console.log(props.tempValue);
      return (
           <div className={props.classname}>
                {props.iconname}
